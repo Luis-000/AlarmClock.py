@@ -27,7 +27,10 @@ def set_alarm(alarm_time):
             is_running = False
         time.sleep(1)
 
+try:
+    if __name__ == "__main__":
+        alarm_time = input("Enter the alarm time (HH:MM:SS): ")
+        set_alarm(alarm_time)
 
-if __name__ == "__main__":
-    alarm_time = input("Enter the alarm time (HH:MM:SS): ")
-    set_alarm(alarm_time)
+except KeyboardInterrupt:
+    print("Have a nice day!")
